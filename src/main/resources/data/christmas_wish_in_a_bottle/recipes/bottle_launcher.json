@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "%#%",
+    "%$%",
+    "%%%"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:dispenser"
+    },
+    "$": {
+      "item": "jellyfishing:blue_jelly_block"
+    },
+    "%": {
+      "item": "jellyfishing:scrap_metal"
+    }
+  },
+  "result": {
+    "item": "christmas_wish_in_a_bottle:bottle_launcher"
+  }
+}

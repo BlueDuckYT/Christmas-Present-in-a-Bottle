@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "christmas_wish_in_a_bottle:block/bottle_launcher",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "christmas_wish_in_a_bottle:block/bottle_launcher",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "christmas_wish_in_a_bottle:block/bottle_launcher"
+    },
+    "facing=south": {
+      "model": "christmas_wish_in_a_bottle:block/bottle_launcher",
+      "y": 180
+    }
+  }
+}

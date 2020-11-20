@@ -1,0 +1,7 @@
+{
+  "christmas_wish_in_a_bottle.text.too_many": "You have already sent a lot of Christmas wishes!  Wait until your presents arrive to send another.",
+  "christmas_wish_in_a_bottle.text.under_block": "The Bottle Launcher is under a block!  Move it into an unoccupied area to launch a wish.",
+
+  "block.christmas_wish_in_a_bottle.bottle_launcher": "Bottle Launcher",
+  "item.christmas_wish_in_a_bottle.christmas_wish_in_a_bottle": "Christmas Wish in a Bottle"
+}
