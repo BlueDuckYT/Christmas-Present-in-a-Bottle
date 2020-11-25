@@ -9,8 +9,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.monster.piglin.PiglinTasks;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.Items;
+import net.minecraft.entity.projectile.FireworkRocketEntity;
+import net.minecraft.item.*;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.stats.Stats;
@@ -43,7 +43,8 @@ public class BottleLauncherBlock extends Block {
                 if (worldIn.canBlockSeeSky(pos.up())) {
                     player.getPersistentData().putInt("day_presents", player.getPersistentData().getInt("day_presents") + 1);
                     player.getHeldItem(handIn).shrink(1);
-                    player.playSound(SoundEvents.BLOCK_ANVIL_LAND, SoundCategory.BLOCKS, 1F, 1F);
+                    player.playSound(SoundEvents.BLOCK_NETHERITE_BLOCK_BREAK, SoundCategory.BLOCKS, 1F, 1F);
+                    worldIn.addEntity(new FireworkRocketEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, new ItemStack(new FireworkRocketItem(new Item.Properties()))));
                 }
                 else {
                     TranslationTextComponent chatMessage = new TranslationTextComponent("christmas_wish_in_a_bottle.text.under_block");

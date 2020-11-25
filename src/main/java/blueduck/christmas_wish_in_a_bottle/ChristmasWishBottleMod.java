@@ -68,6 +68,7 @@ public class ChristmasWishBottleMod
         }
         if (event.player.getPersistentData().getInt("night_presents") > 0 && event.player.getEntityWorld().isDaytime()) {
             BlockPos pos = event.player.getPosition();
+            Boolean ring = false;
             for (int j = 0; j < event.player.getPersistentData().getInt("night_presents"); j++) {
                 if (!event.player.getEntityWorld().isRemote()) {
                     for (int i = 0; i < event.player.getEntityWorld().getRandom().nextInt(5 + CONFIG.MINIMUM_PRESENTS.get()) + CONFIG.MINIMUM_PRESENTS.get(); i++) {
@@ -76,8 +77,9 @@ public class ChristmasWishBottleMod
                             event.player.getEntityWorld().setBlockState(getGroundPos(pos2, event.player.getEntityWorld()), JollyBoxesBlocks.SMALL_JOLLY_BOX.get().getDefaultState());
                         }
                     }
-                    event.player.playSound(JollyBoxesSounds.SLEIGH_BELLS.get(), SoundCategory.AMBIENT, 1F, 1F);
+                    ring = true;
                 }
+                if (ring) event.player.playSound(JollyBoxesSounds.SLEIGH_BELLS.get(), SoundCategory.AMBIENT, 1F, 1F);
             }
             event.player.getPersistentData().putInt("night_presents", 0);
         }
